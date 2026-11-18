@@ -1,8 +1,8 @@
 # LC Elo Analyzer — Open-source web starter
 
-Turn a private group-chat `.txt` export into a configurable dashboard and downloadable PDF.
-This is an **initial working Streamlit application** adapted from the LC Elo analysis script.
-It retains the existing report charts and calculations while removing hard-coded
+Turn a group-chat `.txt` export into a configurable dashboard and downloadable PDF.
+This is a **Streamlit application** adapted from a text analysis script.
+It outputs report charts and calculations while removing hard-coded
 participants, names, and colors. The repository contains **no real conversations**.
 
 ## Features
@@ -29,29 +29,6 @@ The app opens in the browser at `http://localhost:8501`. Close the terminal or s
 Streamlit when finished. If Python 3.12 is not installed, choose an installed supported
 version using `py -0p` (Windows). On macOS/Linux, use `python3 -m venv .venv`
 and `.venv/bin/python -m streamlit run app.py`.
-
-## Make source code public on GitHub
-
-1. Create a public repository (for example, `lc-elo-analyzer`).
-2. Add `app.py`, `analysis_core.py`, `requirements.txt`, `.gitignore`, this README,
-   `sample_export.txt`, and `tests/`.
-3. Optionally add `top_100_english_words.csv` (only the generic word list, no personal data; verify redistribution permission).
-4. **Never add** real chat export files, PDF reports, personal configuration files,
-   or data directories. The `.gitignore` provides guardrails but cannot undo a past commit.
-5. Run `git status` and inspect all tracked files before pushing.
-
-## Publish a hosted site (optional)
-
-On [Streamlit Community Cloud](https://share.streamlit.io), create a new app from your
-GitHub repository and select `app.py` as the main file. Streamlit handles installing
-packages from `requirements.txt` and gives the app a public URL.
-
-**Privacy warning:** Hosted Streamlit uploads are sent to a remote backend. This starter
-does not intentionally save uploaded data to disk, place it in a global cache, or log
-raw message bodies, but **that is not equivalent to browser-only processing**.
-Do not promise end-to-end privacy on third-party hosting. If strict local-only
-processing is required, run the Streamlit app locally or later port to a
-client-side JavaScript/Pyodide application hosted on GitHub Pages.
 
 ## Files
 
