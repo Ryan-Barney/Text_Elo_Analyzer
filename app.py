@@ -23,7 +23,7 @@ from analysis_core import (
     parse_common_words_csv, relabel_records, word_token,
 )
 
-st.set_page_config(page_title="LC Elo Analyzer", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Text Elo Analyzer", page_icon="📊", layout="wide")
 
 # Matplotlib is not fully thread-safe; serialize PDF/chart rendering on the server.
 _RENDER_LOCK = threading.RLock()
@@ -126,8 +126,8 @@ def _summary_table(records, aliases, weights, word_denominator):
     return pd.DataFrame(rows).sort_values("Messages", ascending=False)
 
 
-st.title("LC Elo Analyzer")
-st.caption("Open-source conversation analytics: customize participants, explore activity, and download a PDF report.")
+st.title("Text Elo Analyzer")
+st.caption("Conversation analytics: customize participants, explore activity, and download a PDF report.")
 
 with st.sidebar:
     st.header("1 · Conversation")
